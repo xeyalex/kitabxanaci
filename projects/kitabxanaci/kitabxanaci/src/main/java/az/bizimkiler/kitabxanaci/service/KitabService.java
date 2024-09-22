@@ -43,5 +43,8 @@ public class KitabService {
     public List<Kitab> getBookHistory() {
         return kitabRepository.findAll(); // Tarix
     }
+    public List<Kitab> searchBooks(String keyword) {
+        return kitabRepository.findByTitleContainingIgnoreCaseOrAuthorContainingIgnoreCase(keyword, keyword);
+    }
 
 }

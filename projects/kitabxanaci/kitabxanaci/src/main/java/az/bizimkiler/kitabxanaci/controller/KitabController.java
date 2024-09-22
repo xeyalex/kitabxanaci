@@ -40,4 +40,9 @@ public class KitabController {
         kitabService.deleteKitab(id);
         return ResponseEntity.ok("Kitab silindi");
     }
+    @GetMapping("/search")
+    public ResponseEntity<List<Kitab>> searchBooks(@RequestParam String keyword) {
+        List<Kitab> foundBooks = kitabService.searchBooks(keyword);
+        return ResponseEntity.ok(foundBooks);
+    }
 }
