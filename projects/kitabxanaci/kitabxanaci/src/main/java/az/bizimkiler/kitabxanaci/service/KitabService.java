@@ -38,5 +38,10 @@ public class KitabService {
     // Kitabı ID ilə silmək
     public void deleteKitab(Long id) {
         kitabRepository.deleteById(id);
+
     }
+    public List<Kitab> getBookHistory() {
+        return kitabRepository.findAll(); // Tarix
+    }
+
 }

@@ -28,6 +28,11 @@ public class KitabController {
     public ResponseEntity<List<Kitab>> getAllKitablar() {
         return ResponseEntity.ok(kitabService.getAllKitablar());
     }
+    @GetMapping("/history")
+    public ResponseEntity<List<Kitab>> getBookHistory() {
+        List<Kitab> kitaplar = kitabService.getBookHistory();
+        return ResponseEntity.ok(kitaplar); //kitab tarix
+    }
 
     // Kitabı silmək
     @DeleteMapping("/{id}")

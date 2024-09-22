@@ -7,6 +7,9 @@ import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.time.LocalDateTime;
+
 @Entity
 @Data
 @AllArgsConstructor
@@ -20,6 +23,8 @@ public class Kitab {
     private String isbn;
     private int publishYear;
     private String imagePath;
+    private LocalDateTime createdAt; // Qeydiyyat tarixi
+    private LocalDateTime updatedAt; // Dəyişiklik tarixi
 
 
 
