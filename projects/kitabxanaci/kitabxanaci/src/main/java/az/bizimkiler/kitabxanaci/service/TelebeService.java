@@ -10,17 +10,17 @@ import java.util.Optional;
 
 @Service
 public class TelebeService {
-   @Autowired
-private TelebeRepository telebeRepository;
-   public void qeydiyyatTelebe(Telebe telebe){
-       telebeRepository.save(telebe);
+    @Autowired
+    private TelebeRepository telebeRepository;
+    public void qeydiyyatTelebe(Telebe telebe){
+        telebeRepository.save(telebe);
 
-   }
-public boolean loginTelebe(LoginRequest loginRequest){
-    Optional<Telebe>telebe=telebeRepository.findByEmail(loginRequest.getEmail());
-    if (telebe.isPresent()&& telebe.get().getPassword().equals(loginRequest.getPassword())){
-        return true;
     }
-    return false;
-}
+    public boolean loginTelebe(LoginRequest loginRequest){
+        Optional<Telebe>telebe=telebeRepository.findByEmail(loginRequest.getEmail());
+        if (telebe.isPresent()&& telebe.get().getPassword().equals(loginRequest.getPassword())){
+            return true;
+        }
+        return false;
+    }
 }

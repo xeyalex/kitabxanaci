@@ -19,6 +19,7 @@ public class Kitab {
     private String title;
     private String isbn;
     private int publishYear;
+    private String imagePath;
 
 
 
