@@ -8,6 +8,10 @@ import lombok.NoArgsConstructor;
     @NoArgsConstructor
     @AllArgsConstructor
     public class KitabxanaciLoginRequest {
-        private String email;
-        private String password;
+    private String name;
+    private String surname;
+    private String phone;
+    private String address;
+    private String email;
+    private String password;
 }
