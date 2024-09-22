@@ -19,7 +19,6 @@ public class UserController {
         userService.registerUser(user);
         return ResponseEntity.ok("İstifadəçi qeydiyyatdan keçdi.");
     }
-    // Profil yeniləmə
     @PutMapping("/{userId}")
     public ResponseEntity<String> updateProfile(@PathVariable Long userId, @RequestBody UserProfileUpdate update) {
         userService.updateProfile(userId, update);
